@@ -1,4 +1,4 @@
-/*In the beginning, all the elements were sized in px, which fixed the value of the element size and made it impossible to adapt the page.*/
+
  /**/
 * {
     padding: 0;
@@ -14,8 +14,8 @@ img {
 .con {
     position: relative;
     width: 100%;
-    height: 997px;
-   /* overflow-y: scroll;*/
+    /* height: 997px; */
+   overflow-y: scroll;
     background-image: radial-gradient(circle at 50% 50%, #795647, #513F36, #3A322B);
     padding: 0 0 50px 0;
 }
@@ -24,7 +24,7 @@ img {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    height:40%;
+    height:377px;
     
 }
 
@@ -91,16 +91,18 @@ img {
         
 }
 
-
-.add_btn>img{
+.add_btn{
     position: absolute;
     width: 70px;
-    /*height: 110px;*/
     left: 790px;
     top: 145px;
     /*z-index: 999;*/
-    /*Placing the element at the top level looks unchanged and requires a new attempt. https://developer.mozilla.org/en-US/docs/Web/CSS/z-index*/
+    /*Placing the element at the top level，but it will influence other element . https://developer.mozilla.org/en-US/docs/Web/CSS/z-index*/
 
+}
+.add_btn>img{
+    width: 100%;
+    height: 100%;
 }
 .con_bottom{
     width:100%;
@@ -139,7 +141,7 @@ img {
     font-size: 30px;
     position: absolute;
     width: 100%;
-    left: 169px;
+   /* left: 169px; */
     top: 120px;
     font-style: normal;
     font-weight: 400;
@@ -174,3 +176,170 @@ img {
     margin-top: 20px;
 }
 
+
+
+.add_mark{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(130, 85, 87, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.mark_form{
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+.mark_form>div>input{
+    padding: 15px 20px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0);
+    border: 2px solid white;
+    margin: 10px 0px;
+    width: 350px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    font-size: 26px;
+}
+.mark_form>textarea{
+    width: 100%;
+}
+.mark_form_sel_img{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+.mark_draw{
+    width: 30px;
+    height: 30px;
+    background: url("./img/fs2.png") no-repeat;
+    background-size: cover;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.mark_form_top{
+    display: flex;
+    align-items: flex-end;
+}
+.mark_form_draw{
+    display: flex;
+    margin-left: 10px;
+}
+.mark_draw_active{
+    background: url("./img/fs1.png") no-repeat !important;
+    background-size: cover !important;
+}
+.mark_form_btn{
+    display: flex;
+    justify-content: space-between;
+}
+.mark_form_btn>div{
+    width: 48%;
+    border: 2px solid white;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+    padding: 20px 0;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.mark_form_btn>div:hover{
+    background: white;
+    color: #513F36;
+}
+.sle_img_mark{
+    width: auto;
+    height: auto;
+    background: #C1C1C1;
+    position: fixed;
+    z-index: 9999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 800px;
+    display: none;
+}
+.img_list{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.img_list>div{
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.img_list>div>img{
+    width: 100%;
+    height: 100%;
+}
+.sle_img_btn{
+    padding: 10px 20px;
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.sle_img_btn:hover{
+    background: white;
+    color: #513F36;
+}
+.add_name_src{
+    cursor: pointer;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: white;
+}
+
+textarea {
+    width: 90%;
+    height: 150px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    border: 1px solid white;
+    outline: none;
+    font-size: 24px;
+    padding: 5px;
+}
+.start_con{
+    width: 85%;
+    margin: 20px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.start_con>div{
+    cursor: pointer;
+}
+.start_btn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.start_btn>div{
+    width: 120px;
+    display: block;
+    font-size: 20px;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
